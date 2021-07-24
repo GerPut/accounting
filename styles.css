@@ -4,7 +4,7 @@
     --colorA: #104D26;
     --colorB: #2D76B1;
     --colorC: #5C5E71;
-    --colorD: #000;
+    --colorD: #333;
     --colorE: #fff;
     --mainfont: 'Montserrat', sans-serif;
     /* --mainfont: 'Mulish', sans-serif; */
@@ -18,7 +18,7 @@ body {
     margin: 0;
     font-family: var(--mainfont);
     background-color: var(--colorD);
-    color: #fff;
+    color: var(--colorE);
     font-size: 1.1rem;
     line-height: 1.5;
     text-align: center;
@@ -43,18 +43,20 @@ p {
 .btn {
     display: inline-block;
     margin: 0.5em 0;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--colorD);
+    color: var(--colorE);
     text-decoration: none;
     padding: 0.5em 1em;
     border: 1px solid #666;
 }
 
 .btn:hover {
-    background: #eaeaea;
-    color: #333;
+    background: var(--colorE);
+    color: var(--colorD);
     transition: 1.5s ease-in-out;
 }
+
+/* HEADER */
 
 #showcase {
     min-height: 450px;
@@ -65,7 +67,7 @@ p {
 
 #showcase .bg-image {
     position: absolute;
-    background: #fff url('./images/oliver-spicer-mplWRYfSvKk-unsplash.jpg');
+    background: var(--colorE) url('./images/oliver-spicer-mplWRYfSvKk-unsplash.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -84,11 +86,15 @@ p {
     padding: 0 1.5em;
 }
 
+/* SECTION A */
+
 #section-a {
-    background: #eaeaea;
-    color: #333;
+    background: var(--colorE);
+    color: var(--colorD);
     padding-bottom: 2em;
 }
+
+/* SECTION B */
 
 #section-b {
     padding: 2em 1em 1em;
@@ -103,20 +109,22 @@ p {
 
 #section-b li {
     margin-bottom: 1em;
-    background: #fff;
-    color: #333;
+    background: var(--colorE);
+    color: var(--colorD);
 }
 
 .card-content {
     padding: 1.5em;
 }
 
+/* SECTION C */
+
 #section-c {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: #fff;
-    color: #333;
+    background: var(--colorE);
+    color: var(--colorD);
     padding: 2em;
 }
 
@@ -129,9 +137,11 @@ ul {
     list-style: none;
 }
 
+/* SECTION D */
+
 #section-d .box {
     padding: 2em;
-    color: #fff;
+    color: var(--colorE);
 }
 
 #section-d .box:first-child {
@@ -152,15 +162,27 @@ input {
 }
 
 .contact-form {
-    width: 100px;
+    width: 300px;
+    font-size: 2em;
+    padding: 1em;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    transition: all 2s ease-out;
+    transform: scale(0.3)
+}
+
+.contact-form.fade-forward {
+    opacity: 1;
+    transform: scale(1)
 }
 
 .detailsinput {
-    width: 200px;
+    width: 250px;
+    margin-bottom: 15px;
+    font-family: var(--mainfont);
+    color: var(--colorC);
     resize: none;
 }
 
@@ -169,10 +191,12 @@ input {
     padding-bottom: 26px;
 }
 
+/* FOOTER */
+
 #main-footer {
     padding: 2em;
     background: var(--colorA);
-    color: #fff;
+    color: var(--colorE);
     text-align: center;
 }
 
