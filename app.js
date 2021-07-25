@@ -1,20 +1,43 @@
-//Logo appear
-// gsap.from('.hello', { duration: 1, x: '-100vw', delay: 0.5, ease: 'power.in' })
-// gsap.from('.cog-container', { duration: 1, x: '200vw', delay: 0.5, ease: 'power.in' })
+//Scrolling Animations with Scroll Magic
 
-// //Scrolling Animations with Scroll Magic
-// var controller = new ScrollMagic.Controller();
+//CARDS
+//Card-1
+var controller = new ScrollMagic.Controller();
 
-// var ourScene = new ScrollMagic.Scene({
-//     triggerElement: '.card',
-//     reverse: false
-// }).setClassToggle('.card', 'fade-in').addTo(controller)
+var ourScene = new ScrollMagic.Scene({
+    triggerElement: '#section-b',
+    reverse: false
+}).setClassToggle('.card-list-1', 'move-in').addTo(controller)
 
-//Contact Form animation with Scroll Magic  
+//Card-2
+var controller = new ScrollMagic.Controller();
+
+var ourScene = new ScrollMagic.Scene({
+    triggerElement: '#section-b',
+    reverse: false
+}).setClassToggle('.card-list-2', 'move-in').addTo(controller)
+
+//Card-3
+var controller = new ScrollMagic.Controller();
+
+var ourScene = new ScrollMagic.Scene({
+    triggerElement: '#section-b',
+    reverse: false
+}).setClassToggle('.card-list-3', 'move-in').addTo(controller)
+
+//LIST OF SERVICES
+var controller = new ScrollMagic.Controller();
+
+var ourScene = new ScrollMagic.Scene({
+    triggerElement: '#section-c',
+    reverse: false
+}).setClassToggle('.section-c-list', 'move-up').addTo(controller)
+
+//CONTACT FORM Animation with Scroll Magic  
 var controllerTwo = new ScrollMagic.Controller();
 
 var ourSceneTwo = new ScrollMagic.Scene({
-    triggerElement: '.contact-form',
+    triggerElement: '#section-d',
     reverse: false
 
 }).setClassToggle('.contact-form', 'fade-forward').addTo(controllerTwo)
