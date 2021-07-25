@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap');
 :root {
-    --colorA: #104D26;
+    --colorA: #00A97F;
     --colorB: #2D76B1;
-    --colorC: #5C5E71;
+    --colorC: #C7C7C7;
     --colorD: #333;
     --colorE: #fff;
     --mainfont: 'Montserrat', sans-serif;
@@ -21,7 +21,6 @@ body {
     color: var(--colorE);
     font-size: 1.1rem;
     line-height: 1.5;
-    text-align: center;
 }
 
 img {
@@ -33,11 +32,13 @@ img {
 h1, h2, h3 {
     margin: 0;
     padding: 1em 0;
+    padding-bottom: 0;
 }
 
 p {
     margin: 0;
     padding: 1em 0;
+    padding-bottom: 0;
 }
 
 .btn {
@@ -48,6 +49,7 @@ p {
     text-decoration: none;
     padding: 0.5em 1em;
     border: 1px solid #666;
+    font-family: var(--mainfont);
 }
 
 .btn:hover {
@@ -86,6 +88,10 @@ p {
     padding: 0 1.5em;
 }
 
+.header-paragraph {
+    padding-bottom: 1em;
+}
+
 /* SECTION A */
 
 #section-a {
@@ -94,7 +100,15 @@ p {
     padding-bottom: 2em;
 }
 
+.content-titlesection-a {
+    padding-bottom: 1em;
+}
+
 /* SECTION B */
+
+.section-b-content-title {
+    text-align: center;
+}
 
 #section-b {
     padding: 2em 1em 1em;
@@ -117,24 +131,47 @@ p {
     padding: 1.5em;
 }
 
+.card-list-1, .card-list-2, .card-list-3 {
+    transition: all 1s ease-out;
+    transform: translateX(100px);
+    opacity: 0
+}
+
+.card-list-1.move-in, .card-list-2.move-in, .card-list-3.move-in {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
 /* SECTION C */
 
 #section-c {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     background: var(--colorE);
     color: var(--colorD);
-    padding: 2em;
+    padding-bottom: 2em;
 }
 
-ul {
+.section-c-list {
     padding: 0;
+}
+
+.move-list {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .section-c-list {
     padding: none;
     list-style: none;
+    transition: all 1s ease-out;
+    transform: translateY(100px);
+    opacity: 0
+}
+
+.section-c-list.move-up {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 /* SECTION D */
@@ -170,7 +207,8 @@ input {
     justify-content: space-evenly;
     align-items: center;
     transition: all 2s ease-out;
-    transform: scale(0.3)
+    transform: scale(0.3);
+    opacity: 0;
 }
 
 .contact-form.fade-forward {
@@ -182,13 +220,18 @@ input {
     width: 250px;
     margin-bottom: 15px;
     font-family: var(--mainfont);
-    color: var(--colorC);
+    font-size: 1.1rem;
+    color: var(--colorD);
     resize: none;
 }
 
 .fab.fa-whatsapp {
     font-size: 40px;
     padding-bottom: 26px;
+}
+
+.content-title-about {
+    text-align: center;
 }
 
 /* FOOTER */
