@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@0;1&display=swap');
 :root {
     --colorA: #00A97F;
-    --colorB: #2D76B1;
+    --colorB: #1D3D5A;
     --colorC: #C7C7C7;
-    --colorD: #333;
-    --colorE: #fff;
+    --colorD: #222222;
+    --colorE: #FBF5F3;
     --mainfont: 'Montserrat', sans-serif;
-    /* --mainfont: 'Mulish', sans-serif; */
+    --secondary-font: 'PT Serif', serif;
 }
 
 html {
@@ -39,6 +39,8 @@ p {
     margin: 0;
     padding: 1em 0;
     padding-bottom: 0;
+    line-height: 2em;
+    font-family: var(--secondary-font);
 }
 
 .btn {
@@ -49,6 +51,7 @@ p {
     text-decoration: none;
     padding: 0.5em 1em;
     border: 1px solid #666;
+    border-radius: 50px;
     font-family: var(--mainfont);
 }
 
@@ -90,6 +93,7 @@ p {
 
 .header-paragraph {
     padding-bottom: 1em;
+    font-family: var(--mainfont);
 }
 
 /* SECTION A */
@@ -147,7 +151,7 @@ p {
 #section-c {
     background: var(--colorE);
     color: var(--colorD);
-    padding-bottom: 2em;
+    padding: 2em;
 }
 
 .section-c-list {
@@ -158,7 +162,8 @@ p {
     text-align: left;
     margin-left: 20px;
     margin-bottom: 20px;
-    font-weight: bold;
+    font-weight: 200;
+    font-size: 1.3rem;
 }
 
 .section-c-list {
@@ -227,11 +232,14 @@ input {
 
 .fab.fa-whatsapp {
     font-size: 40px;
-    padding-bottom: 26px;
 }
 
 .content-title-about {
     text-align: center;
+}
+
+.section-d-paragraph {
+    padding-bottom: 1em;
 }
 
 /* FOOTER */
@@ -272,5 +280,8 @@ input {
     }
     #section-b li {
         width: 31%;
+    }
+    #section-c .content-wrap {
+        padding: 1em;
     }
 }
